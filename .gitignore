@@ -10,3 +10,5 @@ pgdata/
 tags
 .ghc.environment*
 cabal.project.local
+jwks.json
+session_key.json

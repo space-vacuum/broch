@@ -1,0 +1,16 @@
+packages: .
+
+source-repository-package
+    type: git
+    location: https://github.com/marshall-lee/postgresql-libpq.git
+    tag: 16fcc31100904580eb0b2b36c2d216848ca6437c
+
+source-repository-package
+    type: git
+    location: https://github.com/space-vacuum/postgresql-simple.git
+    tag: 44d29c4b870c09b03882d771d2714b06b344e9c8
+
+source-repository-package
+    type: git
+    location: https://github.com/space-vacuum/jose-jwt.git
+    tag: 654ae202c9dec32120b670160c50a9d48d6f25a0

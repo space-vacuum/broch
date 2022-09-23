@@ -14,7 +14,8 @@ import Data.ByteArray.Encoding
 import Data.ByteString (ByteString)
 import qualified Data.ByteString.Char8 as B
 import qualified Data.ByteString.Lazy as BL
-import qualified Data.HashMap.Strict as H
+import qualified Data.Aeson.KeyMap as KeyMap
+import qualified Data.Aeson.Key as Key
 import qualified Data.List as DL
 import qualified Data.Map as M
 import Data.Maybe (fromMaybe)
@@ -169,7 +170,7 @@ jsonBody = do
 jsonField :: Text -> WaiTest Text
 jsonField name = do
     Object jsn <- jsonContent
-    case H.lookup name jsn of
+    case KeyMap.lookup (Key.fromText name) jsn of
         Just (String v) -> return v
         _ -> dumpResponse >> error "Failed to find named string field in JSON content"
 
